@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Google Advanced Search</title>
+	<style>
+body {
+	font-family: arial;
+}
+
+
+.bar {
+	position: relative;
+	padding: 10px;
+	text-align: right;
+	height: 2em;
+	margin-bottom: 1em;
+}
+
+.link a {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.link a:hover {
+	text-decoration: underline;
+}
+
+#Search {
+	margin-right: 1em;
+}
+
+#signin {
+	font-family: Arial;
+	border: 1px solid transparent;
+	background-color: #1a73e8;
+	color: white;
+	padding: 0.5em 0.5em;
+	border-radius: 4px;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 9px 23px;
+	letter-spacing: 0.25px;
+}
+
+#signin:hover {
+	box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15);
+}
+
+.bar img {
+	height: 24px;
+	width: 74px;
+	vertical-align: middle;
+	float: left;
+}
+
+#heading {
+	margin-left: 2em;
+	font-size: 19px;
+	color: #D93025;
+}
+
+#line {
+	border-bottom: 1px solid #ebebeb;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+#searchform {
+	margin-left: 45px;
+	margin-top: 40px;
+}
+
+#searchform #formheader {
+	font-family: Arial, sans-serif;
+	font-size: 100%;
+	color; #333;
+}
+
+table {
+	color: #222
+}
+
+tr input, tr td {
+	font-size: 14px;
+	color: #555;
+}
+
+tr input {
+	width: 32.555em;
+	border: 1px solid #d9d9d9;
+	padding: 0.5em;
+}
+
+tr input:focus {
+	border: 1px solid #4d90fe;
+	box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+tr td input {
+	margin: 0.4em 0;
+}
+
+.td-text {
+	font-size: 13.5px;
+	color: #222
+}
+
+#submit {
+	background-color: #4d90fe;
+	background-image: -moz-linear-gradient(top,#4d90fe,#4787ed);
+	color: #fff;
+	height: 30px;
+	width: 120px;
+	padding: 0 12px;
+	font-family: arial;
+	font-size: 11px;
+	border: 1px solid #3079ed;
+	position: absolute;
+	left: 570px;
+	margin: 10px 0;
+	margin-left: 0.25em;
+}
+
+#submit:hover {
+	background-color: #357ae8;
+	background-image: -moz-linear-gradient(top, #4d90fe, #357ae8);
+	border: 1px solid #2f5bb7;
+	border-image: initial;
+}
+	</style>
+</head>
+<body>
+	<div class="bar">
+		<img src="googlelogo.png" alt="">
+		<span id="Search" class="link"><a href="search.html">Google Search</a></span>
+		<a id='signin' href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAmgQ">Sign in</a>
+	</div>
+
+	<label id="heading">Advanced Search</label>
+	<div id="line"></div>
+
+	<div id="searchform">
+		<div id="formheader">Find pages with...</div>
+		<form action="https://www.google.com/search">
+			<table>
+				<tr>
+					<td class="td-text">all these words: </td>
+					<td><input type="text" name="as_q" autofocus></td>
+				</tr>
+				
+				<tr>
+					<td class="td-text">this exact word or phrase: &nbsp;</td>
+					<td><input type="text" name="as_epq"></td>
+				</tr>
+				
+				<tr>
+					<td class="td-text">any of these words: </td>
+					<td><input type="text" name="as_oq"></td>
+				</tr>
+				
+				<tr>
+					<td class="td-text">none of these words: </td>
+					<td><input type="text" name="as_eq"></td>
+				</tr>
+			</table>
+			<button id="submit" type="submit">Advanced Search</button>
+		</form>
+	</div>
+</body>
+</html>
